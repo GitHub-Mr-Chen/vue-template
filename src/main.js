@@ -5,7 +5,6 @@ import router from './router'
 import store from './store'
 import i18n from './locale'
 import ElementUI from 'element-ui'
-
 import '@/styles/index.scss'
 
 Vue.use(ElementUI, {
