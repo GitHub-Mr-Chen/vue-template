@@ -14,8 +14,6 @@
     "echarts": "^4.6.0",
     "echarts-liquidfill": "^2.0.5",
     "element-ui": "^2.13.0",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
@@ -44,25 +42,7 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.css": [
-      "stylelint --fix",
-      "prettier --write",
-      "git add"
-    ],
-    "*.scss": [
-      "stylelint --fix --syntax scss",
-      "prettier --write",
-      "git add"
-    ],
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ]
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   }
 }
