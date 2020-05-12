@@ -2,22 +2,21 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Layout from '@/layout/index'
-Vue.use(VueRouter)
 import store from '@/store'
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path:  '',
+    path: '',
     component: Layout,
     redirect: 'Home',
     children: [
       {
         path: 'Home',
         component: () => import('@/views/Home'),
-        name: 'Home'
-
-      }
-    ]
+        name: 'Home',
+      },
+    ],
   },
   {
     path: '/About',
@@ -27,21 +26,19 @@ const routes = [
       {
         path: '',
         component: () => import('@/views/About'),
-        name: 'About'
-
-      }
-    ]
-  }
+        name: 'About',
+      },
+    ],
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 // 全局钩子
 router.beforeEach((to, from, next) => {
-
   if (store.state.login) {
     next()
   } else {

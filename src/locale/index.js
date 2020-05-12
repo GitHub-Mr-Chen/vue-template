@@ -11,16 +11,16 @@ Vue.use(VueI18n)
 const messages = {
   en: {
     elmentEnLocale,
-    en
+    en,
   },
   zh: {
     elmentZhLocale,
-    zh
-  }
+    zh,
+  },
 }
 const lang = 'zh_CN'
 
 export default new VueI18n({
   locale: lang,
-  messages
+  messages,
 })

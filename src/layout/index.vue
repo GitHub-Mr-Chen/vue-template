@@ -1,8 +1,8 @@
 <template>
-	<div>
-		<Titlebar></Titlebar>
-		<AppMain></AppMain>
-	</div>
+  <div>
+    <Titlebar></Titlebar>
+    <AppMain></AppMain>
+  </div>
 </template>
 <script>
 import AppMain from './components/AppMain'
@@ -11,7 +11,7 @@ export default {
   name: 'Layout',
   components: {
     AppMain,
-    Titlebar
-  }
+    Titlebar,
+  },
 }
 </script>

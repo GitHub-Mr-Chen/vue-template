@@ -1,5 +1,5 @@
 <template>
-	<div></div>
+  <div></div>
 </template>
 <script>
 // import echarts from 'echarts'
