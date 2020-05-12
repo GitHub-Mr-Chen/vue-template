@@ -7,7 +7,7 @@ import i18n from './locale'
 import ElementUI from 'element-ui'
 import '@/styles/index.scss'
 
-import Loading from './components'
+import Loading from './components/Loading'
 Vue.use(Loading)
 Vue.use(ElementUI, {
   size: 'small',
