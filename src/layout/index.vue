@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Titlebar></Titlebar>
-    <AppMain></AppMain>
+    <Titlebar />
+    <AppMain />
   </div>
 </template>
 <script>

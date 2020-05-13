@@ -30,6 +30,18 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/SplitScree',
+    component: Layout,
+    redirect: '/SplitScree',
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/SplitScree'),
+        name: 'SplitScree',
+      },
+    ],
+  },
 ]
 
 const router = new VueRouter({
