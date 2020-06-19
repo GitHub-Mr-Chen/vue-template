@@ -35,7 +35,7 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 .split-scree {
   /* display: flex; */
   height: 100vh;
@@ -50,27 +50,35 @@ export default {
 }
 
 .line {
+  top: 0;
   position: absolute;
   left: 50%;
-  top: 0;
   width: 5px;
   height: 100vh;
   background: #000;
 }
 
 .line-vertical {
-  position: absolute;
+  background: #000;
   left: 0;
+  position: absolute;
   top: 40%;
   width: 100%;
   height: 10px;
-  background: #000;
 }
 
 .top,
 .bottom {
   background: rgb(97, 61, 61);
   height: 45vh;
+
+  p {
+    div {
+      &:hover {
+        background: #fff;
+      }
+    }
+  }
 }
 
 .top {

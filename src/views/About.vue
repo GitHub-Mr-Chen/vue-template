@@ -59,9 +59,21 @@
         </template>
       </el-table-column>
     </el-table>
+    <el-table
+      :data="table.data"
+      border
+      style="width: 100%;"
+    >
+      <el-table-column
+        v-for="(item, index) in table.column"
+        :key="index"
+        v-bind="item"
+      />
+    </el-table>
   </div>
 </template>
 <script>
+import { getRegistrationActive } from '@/api/statistics'
 export default {
   name: 'About',
   data() {
@@ -100,9 +112,27 @@ export default {
           zip: 200333,
         },
       ],
+      table: {
+        data: [],
+        column: [
+          {
+            prop: 'date',
+            label: '日期',
+          },
+          {
+            prop: 'activity',
+            label: '活跃数量',
+          },
+          {
+            prop: 'register',
+            label: '注册数量',
+          },
+        ],
+      },
     }
   },
-  created() {
+  async created() {
+    this.table.data = await getRegistrationActive()
     // class Father {}
     // class Child extends Father {}
     // window.newChild = new Child()
