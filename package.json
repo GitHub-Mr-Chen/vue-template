@@ -20,7 +20,7 @@
     "numeral": "^2.0.6",
     "register-service-worker": "^1.6.2",
     "standard": "^14.3.3",
-    "stylelint": "^13.3.3",
+    "stylelint": "^15.10.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-scss": "^3.17.2",
